@@ -10,7 +10,7 @@ export function buildServer() {
   app.get("/healthz", async () => ({
     status: "ok",
     version: process.env.APP_VERSION ?? (require("../package.json") as { version: string }).version,
-    color: process.env.APP_COLOR ?? "green",
+    color: process.env.APP_COLOR ?? "stable",
   }));
 
   app.post<{ Body: { ownerId: string; vins: string[]; region: "NA" | "EU" | "ME" } }>("/session", async (req) => {

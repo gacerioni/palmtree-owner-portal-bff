@@ -21,6 +21,26 @@ describe("portal routes", () => {
     }
   });
 
+  it("defaults /healthz to the package version and stable color", async () => {
+    const previousVersion = process.env.APP_VERSION;
+    const previousColor = process.env.APP_COLOR;
+    delete process.env.APP_VERSION;
+    delete process.env.APP_COLOR;
+    const app = buildServer();
+    try {
+      const response = await app.inject("/healthz");
+      expect(response.json()).toEqual({
+        status: "ok",
+        version: (require("../package.json") as { version: string }).version,
+        color: "stable",
+      });
+    } finally {
+      await app.close();
+      if (previousVersion !== undefined) process.env.APP_VERSION = previousVersion;
+      if (previousColor !== undefined) process.env.APP_COLOR = previousColor;
+    }
+  });
+
   it("serves both pages and the demo vehicle through the existing session flow", async () => {
     const app = buildServer();
     try {
