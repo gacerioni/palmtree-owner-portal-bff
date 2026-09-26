@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fastify/static": "7.0.4",
     "axios": "0.21.1",
     "fastify": "^4.24.3",
     "jsonwebtoken": "8.5.1",

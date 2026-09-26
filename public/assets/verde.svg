@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" role="img" aria-label="Illustration of a Palm Tree Verde electric grand tourer">
+  <defs>
+    <linearGradient id="paint" x1="0" y1="0" x2=".35" y2="1"><stop stop-color="#799a84"/><stop offset=".28" stop-color="#304d40"/><stop offset=".65" stop-color="#19382d"/><stop offset="1" stop-color="#091a16"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d3e8db" stop-opacity=".66"/><stop offset=".38" stop-color="#577e75" stop-opacity=".73"/><stop offset="1" stop-color="#142a2d"/></linearGradient>
+    <linearGradient id="shine"><stop stop-color="#fff" stop-opacity=".05"/><stop offset=".44" stop-color="#e0f7d6" stop-opacity=".7"/><stop offset="1" stop-color="#fff" stop-opacity=".05"/></linearGradient>
+    <radialGradient id="wheel"><stop stop-color="#8b9793"/><stop offset=".18" stop-color="#151e1d"/><stop offset=".62" stop-color="#0e1314"/><stop offset=".72" stop-color="#4b5956"/><stop offset=".78" stop-color="#131a1a"/><stop offset="1" stop-color="#020707"/></radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="17"/></filter>
+  </defs>
+  <ellipse cx="594" cy="403" rx="520" ry="38" fill="#000" opacity=".6" filter="url(#blur)"/>
+  <path d="M66 313 Q75 287 105 277 L189 257 Q237 246 285 219 L379 160 Q411 141 471 137 L765 134 Q816 136 859 164 L955 236 Q1019 250 1092 274 Q1137 288 1147 313 L1153 354 Q1150 378 1128 380 L1065 383 Q1054 317 988 314 Q921 312 904 382 L319 383 Q309 312 243 312 Q173 312 157 382 L105 377 Q70 373 64 350 Z" fill="url(#paint)" stroke="#8eac94" stroke-opacity=".42" stroke-width="2"/>
+  <path d="M301 230 L392 167 Q415 151 470 149 L756 147 Q802 147 833 170 L923 231 Q759 236 583 235 Z" fill="url(#glass)" stroke="#c1d6c3" stroke-opacity=".42" stroke-width="2"/>
+  <path d="M577 151 L577 233 M830 170 L922 231" stroke="#0a1817" stroke-width="13" opacity=".8"/>
+  <path d="M310 234 Q602 244 938 235 L1018 253 Q751 259 442 250 L229 261" fill="none" stroke="url(#shine)" stroke-width="3"/>
+  <path d="M85 300 Q322 269 501 267 Q798 258 1028 273" fill="none" stroke="#b4c5ac" stroke-opacity=".3" stroke-width="2"/>
+  <path d="M324 299 Q574 314 899 297" fill="none" stroke="#b2c8ae" stroke-opacity=".24" stroke-width="2"/>
+  <path d="M493 263 L534 262 M797 258 L834 258" stroke="#b3c7b3" stroke-opacity=".63" stroke-width="4" stroke-linecap="round"/>
+  <path d="M97 290 L156 276 L184 283 L130 301 Z" fill="#f8fff1" opacity=".87"/>
+  <path d="M1087 281 L1127 302 L1132 319 L1075 311 Z" fill="#c54833" opacity=".85"/>
+  <path d="M78 335 Q615 359 1146 331 L1139 367 Q604 397 89 366 Z" fill="#091814" opacity=".6"/>
+  <path d="M165 377 A79 79 0 0 1 322 377 M910 377 A79 79 0 0 1 1067 377" fill="none" stroke="#06100e" stroke-width="23"/>
+  <circle cx="244" cy="378" r="62" fill="url(#wheel)"/><circle cx="988" cy="378" r="62" fill="url(#wheel)"/>
+  <g fill="none" stroke="#9daaa5" stroke-width="3" opacity=".65"><circle cx="244" cy="378" r="35"/><circle cx="988" cy="378" r="35"/><path d="M244 345v66m-33-33h66m-56-24 46 48m0-48-46 48M988 345v66m-33-33h66m-56-24 46 48m0-48-46 48"/></g>
+  <circle cx="244" cy="378" r="9" fill="#80978a"/><circle cx="988" cy="378" r="9" fill="#80978a"/>
+</svg>
