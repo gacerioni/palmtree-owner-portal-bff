@@ -1,5 +1,5 @@
 {
-  "name": "@halcyon/owner-portal-bff",
+  "name": "@palmtree/owner-portal-bff",
   "version": "5.3.1",
   "description": "Backend-for-frontend for the owner web portal and mobile app: session tokens, vehicle summary, charging history.",
   "main": "dist/server.js",
