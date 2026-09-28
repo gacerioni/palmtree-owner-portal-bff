@@ -55,7 +55,7 @@ jobs:
       - name: canary 10%
         run: |
           ssh -o StrictHostKeyChecking=accept-new ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} \
-            "cd ~/palmtree-appsec/deploy && git pull -q && ./canary.sh ${{ needs.build.outputs.tag }}"
+            "cd ~/palmtree-appsec/deploy && git checkout -q -- ../dashboard && git pull -q && ./canary.sh ${{ needs.build.outputs.tag }}"
 
   promote:
     needs: [build, canary]
