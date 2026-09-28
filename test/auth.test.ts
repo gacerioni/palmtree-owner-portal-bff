@@ -1,3 +1,4 @@
+import jwt from "jsonwebtoken";
 import { issueSession, verifySession } from "../src/auth";
 
 describe("owner session tokens", () => {
@@ -17,5 +18,20 @@ describe("owner session tokens", () => {
 
   it("rejects garbage", () => {
     expect(() => verifySession("not-a-token")).toThrow();
+  });
+
+  it("rejects a token signed with another key", () => {
+    const forged = jwt.sign({ sub: "own_123", vins: session.vins, region: "NA" }, "attacker-key", {
+      issuer: "owner-portal-bff",
+    });
+    expect(() => verifySession(forged)).toThrow();
+  });
+
+  it("rejects an unsigned alg=none token", () => {
+    const unsigned = jwt.sign({ sub: "own_123", vins: session.vins, region: "NA" }, "", {
+      algorithm: "none",
+      issuer: "owner-portal-bff",
+    });
+    expect(() => verifySession(unsigned)).toThrow();
   });
 });
