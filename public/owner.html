@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101815">
+  <title>Owner Portal — Palm Tree Motors</title>
+  <link rel="icon" href="/assets/frond.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>
+</head>
+<body class="owner-page">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Palm Tree Motors home"><img src="/assets/frond.svg" alt="" width="29" height="29"><span>PALM TREE<small>MOTORS</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="/#collection">Models</a><a href="/#charging">Charging</a><a href="/#ownership">Ownership</a></nav>
+    <div class="header-actions"><a class="portal-link" href="/">Back to Palm Tree <span aria-hidden="true">↗</span></a></div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="/#collection">Models</a><a href="/#charging">Charging</a><a href="/#ownership">Ownership</a><a href="/">Home</a></nav>
+  </header>
+  <main class="owner-main">
+    <section class="owner-hero" id="login-view" aria-labelledby="login-heading">
+      <div class="login-panel">
+        <div class="section-kicker"><span class="dot"></span> PALM TREE OWNERSHIP</div>
+        <h1 id="login-heading">Welcome <em>back.</em></h1>
+        <p>Your vehicle, at a glance. Sign in with the prefilled demo details to explore the owner experience.</p>
+        <form class="login-form" id="owner-form">
+          <label for="owner-id">OWNER ID</label><input id="owner-id" name="ownerId" value="owner_demo" required autocomplete="username">
+          <label for="vehicle-vin">VEHICLE VIN</label><input id="vehicle-vin" name="vin" value="50EA1TEA0RA000001" required spellcheck="false" autocomplete="off">
+          <label for="region">REGION</label><select id="region" name="region"><option value="NA">North America · miles</option><option value="EU">Europe · kilometers</option><option value="ME">Middle East · kilometers</option></select>
+          <button class="button button-light" type="submit">View my vehicle <span aria-hidden="true">↗</span></button>
+          <p class="form-error" id="form-error" role="alert" aria-live="polite"></p>
+          <p class="form-help">Demo access only. No password or real account required.</p>
+        </form>
+      </div>
+      <div class="owner-visual"><img src="/assets/verde.svg" alt="Illustration of the Palm Tree Verde electric grand tourer"><span class="visual-label">THE VERDE · ELECTRIC GRAND TOURER</span></div>
+    </section>
+    <section class="dashboard" id="dashboard" aria-labelledby="dashboard-heading" hidden>
+      <div class="dashboard-head"><div><div class="section-kicker"><span class="dot"></span> OWNER PORTAL</div><h1 id="dashboard-heading">Your <em>Verde.</em></h1><p id="welcome-label">Good to have you back.</p></div><button class="signout" id="signout" type="button">Sign out ↗</button></div>
+      <div class="vehicle-overview"><div class="vehicle-showcase"><span class="vehicle-chip">PALM TREE VERDE</span><img src="/assets/verde.svg" alt="Illustration of Palm Tree Verde"></div><div class="vehicle-data"><div class="section-kicker"><span class="dot"></span> VEHICLE STATUS</div><h2>Ready for the road.</h2><div class="battery-row"><div class="battery-ring" id="battery-ring"><span id="battery-value">—</span></div><div><small>ESTIMATED RANGE</small><strong id="range-value">—</strong></div></div><p id="last-seen">Last updated —</p></div></div>
+      <div class="dashboard-grid"><article class="data-card"><div class="section-kicker"><span class="dot"></span> VEHICLE DETAILS</div><h3>The essentials.</h3><dl><div><dt>Vehicle ID</dt><dd id="detail-vin">—</dd></div><div><dt>Odometer</dt><dd id="detail-odometer">—</dd></div><div><dt>Software version</dt><dd id="detail-software">—</dd></div><div><dt>Next service</dt><dd id="detail-service">—</dd></div></dl></article><article class="data-card"><div class="section-kicker"><span class="dot"></span> RECENT ACTIVITY</div><h3>Charging history.</h3><ul class="history-list" id="charging-history"><li>No charging sessions available.</li></ul></article></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-top"><div class="footer-brand"><a class="brand" href="/"><img src="/assets/frond.svg" alt="" width="35" height="35"><span>PALM TREE<small>MOTORS</small></span></a><p>For every road worth taking.</p></div><div class="footer-links"><div><h3>VEHICLES</h3><a href="/#collection">Verde</a><a href="/#collection">Sierra</a><a href="/#collection">Gravitas</a></div><div><h3>EXPLORE</h3><a href="/#charging">Charging</a><a href="/#ownership">Ownership</a></div><div><h3>OWNERS</h3><a href="/owner">Owner portal</a><a href="/">Home</a></div></div></div><div class="footer-bottom"><span>© 2026 Palm Tree Motors</span><span>Palm Tree Motors is a fictional company used for demonstration purposes.</span><span class="build-badge" data-build-badge aria-label="Build version">v— · —</span></div></footer>
+</body>
+</html>
