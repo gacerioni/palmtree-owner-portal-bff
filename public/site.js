@@ -26,6 +26,12 @@ fetch("/healthz")
     document.querySelectorAll("[data-build-badge]").forEach((badge) => {
       badge.textContent = `v${version} · ${color}`;
     });
+    const pill = document.createElement("a");
+    pill.className = `release-pill release-pill--${color}`;
+    pill.href = "/healthz";
+    pill.setAttribute("aria-label", "Release currently serving this page");
+    pill.innerHTML = `<span class="release-pill__dot"></span><span class="release-pill__color">${color}</span><span class="release-pill__version">v${version}</span>`;
+    document.body.appendChild(pill);
   })
   .catch(() => {
     document.querySelectorAll("[data-build-badge]").forEach((badge) => {

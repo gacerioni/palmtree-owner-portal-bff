@@ -186,3 +186,12 @@ h1,h2,h3,p{margin-top:0}
 @media(max-width:760px){.owner-art-center{top:auto;bottom:74px}}
 @media(max-width:440px){.announcement{gap:5px}.announcement a{display:none}.header-actions .portal-link{display:none}.hero{height:640px}.hero-content{padding-top:72px}.hero h1{font-size:56px}.hero-car{width:165%;right:-42%;bottom:96px}.hero-bottom a{display:none}.footer-links{gap:12px;grid-template-columns:repeat(3,1fr)}.footer-links a{font-size:11px}.feature-stats{gap:25px}.feature-stats strong{font-size:27px}.vehicle-showcase{height:260px}.battery-row{gap:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+.release-pill{position:fixed;right:22px;bottom:22px;z-index:50;display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;font-size:13px;letter-spacing:.06em;text-decoration:none;color:#f4f3ee;background:#101815e6;border:1px solid #6fa48766;backdrop-filter:blur(8px);box-shadow:0 10px 30px #0006}
+.release-pill__dot{width:9px;height:9px;border-radius:50%;background:#7fd39a;box-shadow:0 0 0 0 #7fd39a99}
+.release-pill__color{text-transform:uppercase;font-weight:600}
+.release-pill__version{opacity:.75;font-variant-numeric:tabular-nums}
+.release-pill--canary{background:#3a2a0ae6;border-color:#e0a83366;color:#ffe9b8}
+.release-pill--canary .release-pill__dot{background:#f0b23a;animation:release-pulse 1.4s ease-out infinite}
+@keyframes release-pulse{0%{box-shadow:0 0 0 0 #f0b23a99}100%{box-shadow:0 0 0 12px #f0b23a00}}
+@media (max-width:640px){.release-pill{right:12px;bottom:12px;padding:8px 12px;font-size:12px}}
