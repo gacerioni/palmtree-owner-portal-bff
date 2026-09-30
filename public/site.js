@@ -17,6 +17,22 @@ if (menuButton && mobileNav) {
   });
 }
 
+const header = document.querySelector(".site-header");
+if (header && document.body.classList.contains("home")) {
+  const onScroll = () => header.classList.toggle("is-solid", window.scrollY > 40);
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+}
+
+const subscribeForm = document.querySelector("#subscribe-form");
+if (subscribeForm) {
+  subscribeForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    subscribeForm.querySelector(".subscribe-note").textContent = "Thanks. You're on the list.";
+    subscribeForm.reset();
+  });
+}
+
 fetch("/healthz")
   .then((response) => {
     if (!response.ok) throw new Error("Health check unavailable");
