@@ -1,3 +1,4 @@
+import jwt from "jsonwebtoken";
 import { issueSession, verifySession } from "../src/auth";
 
 describe("owner session tokens", () => {
@@ -13,6 +14,16 @@ describe("owner session tokens", () => {
     const [h, p, s] = token.split(".");
     const tampered = `${h}.${Buffer.from(JSON.stringify({ sub: "own_999", vins: ["X"], region: "NA" })).toString("base64url")}.${s}`;
     expect(() => verifySession(tampered)).toThrow();
+  });
+
+  it("rejects a token signed with another key", () => {
+    const forged = jwt.sign({ sub: "own_999", vins: ["X"], region: "NA" }, "attacker-key", { issuer: "owner-portal-bff" });
+    expect(() => verifySession(forged)).toThrow();
+  });
+
+  it("rejects an unsigned alg=none token", () => {
+    const unsigned = jwt.sign({ sub: "own_999", vins: ["X"], region: "NA" }, "", { algorithm: "none", issuer: "owner-portal-bff" });
+    expect(() => verifySession(unsigned)).toThrow();
   });
 
   it("rejects garbage", () => {
